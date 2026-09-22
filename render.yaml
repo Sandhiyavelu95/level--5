@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sysslan-feedback-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+
+  - type: web
+    name: sysslan-feedback-frontend
+    runtime: static
+    plan: free
+    buildCommand: ""
+    staticPublishPath: ./public

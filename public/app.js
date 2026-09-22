@@ -1,3 +1,7 @@
+const API_BASE = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+  ? ''
+  : 'https://sysslan-feedback-api.onrender.com';
+
 document.addEventListener('DOMContentLoaded', () => {
   // DOM Elements
   const form = document.getElementById('feedback-form');
@@ -201,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = filterCategorySelect ? filterCategorySelect.value : 'all';
       const sortBy = sortBySelect ? sortBySelect.value : 'newest';
 
-      const url = `/api/feedback?category=${encodeURIComponent(category)}&sortBy=${encodeURIComponent(sortBy)}`;
+      const url = `${API_BASE}/api/feedback?category=${encodeURIComponent(category)}&sortBy=${encodeURIComponent(sortBy)}`;
       const response = await fetch(url);
       
       if (!response.ok) {
@@ -228,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Task 3 & 4: Fetch Analytics Stats ---
   async function fetchStats() {
     try {
-      const response = await fetch('/api/stats');
+      const response = await fetch(`${API_BASE}/api/stats`);
       if (!response.ok) return;
       const result = await response.json();
 
@@ -341,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('/api/feedback', {
+      const response = await fetch(`${API_BASE}/api/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
