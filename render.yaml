@@ -8,10 +8,3 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20.11.0
-
-  - type: web
-    name: sysslan-feedback-frontend
-    runtime: static
-    plan: free
-    buildCommand: ""
-    staticPublishPath: ./public
