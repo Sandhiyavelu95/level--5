@@ -1,6 +1,6 @@
-# Level 5: Final Touch & Review - CodeNova Solutions & Feedback Hub
+# Level 5: Final Touch & Review - Sysslan IT Solutions Feedback Hub
 
-A full-stack web application featuring a corporate IT landing page layout (**CodeNova Solutions** theme) integrated with a dynamic feedback form, SQLite persistent storage, real-time community feed analytics, live filtering & sorting, and backend input validation.
+A full-stack web application featuring a corporate IT landing page layout (**Sysslan IT Solutions** theme) integrated with a dynamic feedback form, SQLite persistent storage, real-time community feed analytics, live filtering & sorting, and backend input validation.
 
 ---
 
@@ -43,7 +43,7 @@ A full-stack web application featuring a corporate IT landing page layout (**Cod
 ├── feedback.db           # SQLite database file
 ├── README.md             # Project documentation
 └── public/               # Frontend static assets
-    ├── index.html        # CodeNova frontpage layout & feedback hub
+    ├── index.html        # Sysslan IT Solutions frontpage layout & feedback hub
     ├── style.css         # Responsive styling, navigation, & theme colors
     └── app.js            # Client-side JavaScript (nav, validation, fetch API)
 ```
