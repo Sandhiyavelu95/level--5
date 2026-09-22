@@ -1,5 +1,6 @@
 name: Deploy frontend to GitHub Pages
 
+# Re-run after switching Pages source to "GitHub Actions" in repo settings.
 on:
   push:
     branches: [main]
